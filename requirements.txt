@@ -1,0 +1,11 @@
+# Versions used for the reported results (see results/reproducibility_record.json).
+# Python 3.13.16
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+imbalanced-learn==0.14.2
+xgboost==3.4.1
+shap==0.52.0
+matplotlib
+joblib

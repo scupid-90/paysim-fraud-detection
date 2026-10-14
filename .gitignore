@@ -1,0 +1,25 @@
+# Raw data (download separately, see data/README.md)
+data/*.csv
+data/*.zip
+
+# Large regenerated outputs (run_all.sh recreates them)
+results/scores/
+results/split_indices.npz
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets
+.env
+kaggle.json
