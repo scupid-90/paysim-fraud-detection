@@ -1,0 +1,107 @@
+[
+ {
+  "test": "fraud-like TRANSFER is flagged for review (full model)",
+  "passed": true,
+  "detail": "score=0.988714"
+ },
+ {
+  "test": "legitimate PAYMENT approved",
+  "passed": true,
+  "detail": "score=0.0"
+ },
+ {
+  "test": "legitimate CASH_IN approved",
+  "passed": true,
+  "detail": "score=1e-06"
+ },
+ {
+  "test": "response has warnings and comparator",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "test": "score is in [0,1] and not labelled probability",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "test": "explanation lists six features",
+  "passed": true,
+  "detail": "['amount', 'oldbalanceOrg', 'type']"
+ },
+ {
+  "test": "no-balance comparator score independent of balance fields",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "test": "reject: missing field",
+  "passed": true,
+  "detail": "missing required fields: ['amount']"
+ },
+ {
+  "test": "reject: unseen type",
+  "passed": true,
+  "detail": "unknown transaction type 'WITHDRAWAL'; allowed: ['CASH_IN', 'CASH_OUT'"
+ },
+ {
+  "test": "reject: negative amount",
+  "passed": true,
+  "detail": "amount must be non-negative"
+ },
+ {
+  "test": "reject: string amount",
+  "passed": true,
+  "detail": "amount must be numeric, got str"
+ },
+ {
+  "test": "reject: NaN balance",
+  "passed": true,
+  "detail": "oldbalanceOrg must be finite"
+ },
+ {
+  "test": "reject: infinite amount",
+  "passed": true,
+  "detail": "amount must be finite"
+ },
+ {
+  "test": "reject: boolean amount",
+  "passed": true,
+  "detail": "amount must be numeric, got bool"
+ },
+ {
+  "test": "reject: identifier supplied",
+  "passed": true,
+  "detail": "unexpected fields (identifiers and labels must not be supplied): ['nam"
+ },
+ {
+  "test": "reject: label supplied",
+  "passed": true,
+  "detail": "unexpected fields (identifiers and labels must not be supplied): ['isF"
+ },
+ {
+  "test": "reject: None value",
+  "passed": true,
+  "detail": "missing required fields: ['newbalanceDest']"
+ },
+ {
+  "test": "reject: not a mapping",
+  "passed": true,
+  "detail": "transaction must be a mapping of field names to values"
+ },
+ {
+  "test": "deterministic scoring",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "test": "tampered artifact refused",
+  "passed": true,
+  "detail": "artifact xgb_full_original.json failed its checksum; refusin"
+ },
+ {
+  "test": "manifest records reproduced PR-AUC",
+  "passed": true,
+  "detail": ""
+ }
+]

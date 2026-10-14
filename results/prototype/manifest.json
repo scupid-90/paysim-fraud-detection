@@ -1,0 +1,102 @@
+{
+  "purpose": "research prototype; PaySim synthetic data; not for production use",
+  "training_data": "chronological training partition, steps 1-502, original (unresampled)",
+  "validation_data": "steps 503-610 (threshold selection)",
+  "seed": 42,
+  "threshold_rule": "validation maximum F1",
+  "xgb_params": {
+    "n_estimators": 200,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "tree_method": "hist",
+    "eval_metric": "aucpr"
+  },
+  "software": {
+    "python": "3.13.16",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "joblib": "1.6.0"
+  },
+  "artifacts": {
+    "xgb_full_original.json": {
+      "sha256": "90e9356f4350db1c66bbe6a2d1667fce986a61f5b14f0bc26245515e224b2367"
+    },
+    "preprocessor_full.joblib": {
+      "sha256": "c769601bdd8a1045de399c07819d03817afb311b8116507ea7479ca7bf8b80db"
+    },
+    "xgb_no_balances_original.json": {
+      "sha256": "1d906c8d439e8c65581986b9051c2e53b1a20123673893f66d14eb6d86cc9b02"
+    },
+    "preprocessor_no_balances.joblib": {
+      "sha256": "305ecc3836b9742b233c502ee628821fbc9b64b33e0de46173577526db7ca7c5"
+    }
+  },
+  "full": {
+    "name": "xgboost_original_full_features",
+    "columns": [
+      "amount",
+      "oldbalanceOrg",
+      "newbalanceOrig",
+      "oldbalanceDest",
+      "newbalanceDest",
+      "type"
+    ],
+    "feature_names": [
+      "amount",
+      "oldbalanceOrg",
+      "newbalanceOrig",
+      "oldbalanceDest",
+      "newbalanceDest",
+      "type_CASH_IN",
+      "type_CASH_OUT",
+      "type_DEBIT",
+      "type_PAYMENT",
+      "type_TRANSFER"
+    ],
+    "threshold": 0.06781770288944244,
+    "val_f1": 0.9282006920415224,
+    "reproduced_chronological_test": {
+      "pr_auc": 0.9888155984161389,
+      "precision": 0.9422442244224423,
+      "recall": 0.9580536912751678,
+      "f1": 0.9500831946755407,
+      "fpr": 0.0007080362109947909,
+      "TP": 1142,
+      "FP": 70,
+      "TN": 98795,
+      "FN": 50
+    }
+  },
+  "no_balances": {
+    "name": "xgboost_original_no_balances",
+    "columns": [
+      "amount",
+      "type"
+    ],
+    "feature_names": [
+      "amount",
+      "type_CASH_IN",
+      "type_CASH_OUT",
+      "type_DEBIT",
+      "type_PAYMENT",
+      "type_TRANSFER"
+    ],
+    "threshold": 0.07652311772108078,
+    "val_f1": 0.3003717472118959,
+    "reproduced_chronological_test": {
+      "pr_auc": 0.3425575079105893,
+      "precision": 0.978448275862069,
+      "recall": 0.19043624161073824,
+      "f1": 0.31882022471910115,
+      "fpr": 5.057401507105649e-05,
+      "TP": 227,
+      "FP": 5,
+      "TN": 98860,
+      "FN": 965
+    }
+  }
+}
