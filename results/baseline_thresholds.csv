@@ -1,0 +1,4 @@
+group,threshold_val_f1,val_f1,validation_rows,validation_fraud
+chronological_model_on_chronological_test,0.9940976789611591,0.6596194503171247,200119,1124
+random_model_on_random_test,0.9999129566962478,0.5701706108970832,954349,1188
+random_model_on_chronological_test,0.9999129566962478,0.5701706108970832,954349,1188

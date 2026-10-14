@@ -1,0 +1,6 @@
+type,rows,fraud,fraud_pct,oldDest_zero_all_pct,oldDest_zero_fraud_pct,newDest_zero_all_pct,newDest_zero_fraud_pct,oldOrg_zero_all_pct,oldOrg_zero_fraud_pct,newOrig_zero_all_pct,newOrig_zero_fraud_pct
+CASH_IN,1399284,0,0.0,11.69,,19.36,,0.96,,0.0,
+CASH_OUT,2237500,4116,0.184,14.49,30.59,0.51,0.56,45.85,0.9,88.72,99.98
+DEBIT,41432,0,0.0,0.0,,1.13,,14.86,,28.45,
+PAYMENT,2151495,0,0.0,100.0,,100.0,,35.99,,51.18,
+TRANSFER,532909,4097,0.7688,12.22,99.88,0.97,99.29,53.06,0.1,95.97,96.12

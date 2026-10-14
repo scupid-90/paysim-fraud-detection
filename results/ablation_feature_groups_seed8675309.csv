@@ -1,0 +1,6 @@
+configuration,numeric_features,includes_type
+full,"amount,oldbalanceOrg,newbalanceOrig,oldbalanceDest,newbalanceDest",True
+no_origin,"amount,oldbalanceDest,newbalanceDest",True
+no_dest,"amount,oldbalanceOrg,newbalanceOrig",True
+no_balances,amount,True
+engineered,"amount,oldbalanceOrg,newbalanceOrig,oldbalanceDest,newbalanceDest,origin_balance_error,destination_balance_error",True

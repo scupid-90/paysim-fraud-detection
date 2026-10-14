@@ -1,0 +1,15 @@
+design,partition,step_min,step_max,unique_steps,rows,fraud,legitimate,fraud_rate_pct
+primary data (steps 1-718),all,1,718,718,6362324,7917,6354407,0.1244
+tail excluded,all,719,743,25,296,296,0,100.0
+chronological (proposed 70/15/15 by step),train,1,502,502,6062148,5601,6056547,0.0924
+chronological (proposed 70/15/15 by step),validation,503,610,108,200119,1124,198995,0.5617
+chronological (proposed 70/15/15 by step),test,611,718,108,100057,1192,98865,1.1913
+alt A: train = high-volume regime (steps<=408),train,1,408,408,5987417,4589,5982828,0.0766
+alt A: train = high-volume regime (steps<=408),validation,409,563,155,184608,1640,182968,0.8884
+alt A: train = high-volume regime (steps<=408),test,564,718,155,190299,1688,188611,0.887
+"alt B: equal-fraud 70/15/15 (cuts 498,611)",train,1,498,498,6055689,5547,6050142,0.0916
+"alt B: equal-fraud 70/15/15 (cuts 498,611)",validation,499,611,113,206592,1192,205400,0.577
+"alt B: equal-fraud 70/15/15 (cuts 498,611)",test,612,718,107,100043,1178,98865,1.1775
+random stratified 70/15/15,train,1,718,717,4453626,5542,4448084,0.1244
+random stratified 70/15/15,validation,1,718,667,954349,1188,953161,0.1245
+random stratified 70/15/15,test,1,718,657,954349,1187,953162,0.1244

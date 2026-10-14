@@ -1,0 +1,134 @@
+total_rows                                                                   6362620
+fraud_rows                                                                      8213
+fraud_pct                                                                     0.1291
+min_step                                                                           1
+max_step                                                                         743
+unique_steps                                                                     743
+missing_steps                                                                     []
+isFlaggedFraud_positives                                                          16
+fraud_caught_by_isFlaggedFraud                                                    16
+duplicate_rows                                                                     0
+missing_values_total                                                               0
+negative_amounts                                                                   0
+zero_amounts                                                                      16
+zero_amount_fraud                                                                 16
+negative_oldbalanceOrg                                                             0
+negative_newbalanceOrig                                                            0
+negative_oldbalanceDest                                                            0
+negative_newbalanceDest                                                            0
+unique_nameOrig                                                              6353307
+unique_nameDest                                                              2722362
+rows_where_nameOrig_seen_before                                                 9313
+median_rows_per_step_1_700                                                     844.5
+steps_with_zero_legit_total                                                      320
+tail_start_step                                                                  719
+tail_rows                                                                        296
+tail_fraud_rows                                                                  296
+tail_fraud_pct                                                                 100.0
+tail_types                         {'CASH_OUT': 148, 'TRANSFER': 148, 'CASH_IN': ...
+             rows  fraud  fraud_pct  oldDest_zero_all_pct  oldDest_zero_fraud_pct  newDest_zero_all_pct  newDest_zero_fraud_pct  oldOrg_zero_all_pct  oldOrg_zero_fraud_pct  newOrig_zero_all_pct  newOrig_zero_fraud_pct
+type                                                                                                                                                                                                                     
+CASH_IN   1399284      0     0.0000                 11.69                     NaN                 19.36                     NaN                 0.96                    NaN                  0.00                     NaN
+CASH_OUT  2237500   4116     0.1840                 14.49                   30.59                  0.51                    0.56                45.85                    0.9                 88.72                   99.98
+DEBIT       41432      0     0.0000                  0.00                     NaN                  1.13                     NaN                14.86                    NaN                 28.45                     NaN
+PAYMENT   2151495      0     0.0000                100.00                     NaN                100.00                     NaN                35.99                    NaN                 51.18                     NaN
+TRANSFER   532909   4097     0.7688                 12.22                   99.88                  0.97                   99.29                53.06                    0.1                 95.97                   96.12
+      rows  fraud  fraud_pct  legit
+step                               
+714    681     14     2.0558    667
+715   1879     10     0.5322   1869
+716    140      8     5.7143    132
+717    632     12     1.8987    620
+718    918     16     1.7429    902
+719     14     14   100.0000      0
+720     10     10   100.0000      0
+721      4      4   100.0000      0
+722     10     10   100.0000      0
+723     14     14   100.0000      0
+724     14     14   100.0000      0
+725      4      4   100.0000      0
+726     22     22   100.0000      0
+727     12     12   100.0000      0
+728     10     10   100.0000      0
+729      4      4   100.0000      0
+730     28     28   100.0000      0
+731     16     16   100.0000      0
+732     10     10   100.0000      0
+733     10     10   100.0000      0
+734      8      8   100.0000      0
+735     12     12   100.0000      0
+736     14     14   100.0000      0
+737     10     10   100.0000      0
+738     10     10   100.0000      0
+739     10     10   100.0000      0
+740      6      6   100.0000      0
+741     22     22   100.0000      0
+742     14     14   100.0000      0
+743      8      8   100.0000      0
+                  orig_mismatch  dest_mismatch
+type     isFraud                              
+CASH_IN  0               100.00         100.00
+CASH_OUT 0                89.24          22.70
+         1                 0.58          13.24
+DEBIT    0                30.11          23.25
+PAYMENT  0                54.26         100.00
+TRANSFER 0                96.26          22.07
+         1                 0.51          99.95
+       dataset     rows  fraud  fraud_pct  max_step
+0         full  6362620   8213     0.1291       743
+1  steps<= 700  6351199   7723     0.1216       700
+2  steps<= 718  6362324   7917     0.1244       718
+3  steps<= 719  6362338   7931     0.1247       719
+4  steps<= 720  6362348   7941     0.1248       720
+       rows  fraud  fraud_pct  legit
+step                                
+1      2708     16     0.5908   2692
+2      1014      8     0.7890   1006
+3       552      4     0.7246    548
+4       565     10     1.7699    555
+5       665      6     0.9023    659
+6      1660     22     1.3253   1638
+7      6837     12     0.1755   6825
+8     21097     12     0.0569  21085
+9     37628     19     0.0505  37609
+10    35991     11     0.0306  35980
+11    37241      7     0.0188  37234
+12    36153     14     0.0387  36139
+13    37515     14     0.0373  37501
+14    41485     12     0.0289  41473
+15    44609     20     0.0448  44589
+16    42471     10     0.0235  42461
+17    43361      7     0.0161  43354
+18    49579     16     0.0323  49563
+19    51352     11     0.0214  51341
+20    40625      4     0.0098  40621
+21    19152      5     0.0261  19147
+22    12635     23     0.1820  12612
+23     6144      2     0.0326   6142
+24     3216      6     0.1866   3210
+25     1598     18     1.1264   1580
+26      440     12     2.7273    428
+27       41      8    19.5122     33
+28        4      4   100.0000      0
+29        4      4   100.0000      0
+30        8      8   100.0000      0
+              step      type  isFraud  isFlaggedFraud
+count    16.000000        16     16.0            16.0
+unique         NaN         1      NaN             NaN
+top            NaN  CASH_OUT      NaN             NaN
+freq           NaN        16      NaN             NaN
+mean    537.562500       NaN      1.0             0.0
+std     181.895196       NaN      0.0             0.0
+min     212.000000       NaN      1.0             0.0
+25%     415.500000       NaN      1.0             0.0
+50%     601.500000       NaN      1.0             0.0
+75%     678.750000       NaN      1.0             0.0
+max     741.000000       NaN      1.0             0.0
+count    718.000000
+mean      41.972801
+std       48.649987
+min        0.000000
+25%        0.067975
+50%        1.486400
+75%      100.000000
+max      100.000000

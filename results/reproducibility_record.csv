@@ -1,0 +1,51 @@
+item,value
+random_seeds,"[42, 123, 2024, 31415, 8675309]"
+split_seed,42
+shap_sample_seed,0
+features,"['type', 'amount', 'oldbalanceOrg', 'newbalanceOrig', 'oldbalanceDest', 'newbalanceDest']"
+feature_order_after_encoding,"[amount,oldbalanceOrg,newbalanceOrig,oldbalanceDest,newbalanceDest, type one-hot in category order]"
+scaling,StandardScaler fit on training partition only
+encoding,OneHotEncoder(handle_unknown=ignore) fit on training partition only
+dtype.LR,float64 (float32 version superseded)
+dtype.RF,float32
+dtype.XGB,float32
+LR.solver,lbfgs
+LR.C,1.0
+LR.tol,0.0001
+LR.max_iter,1000
+LR.penalty,deprecated
+LR.class_weight,balanced only in class_weight condition
+RF.n_estimators,100
+RF.min_samples_leaf,3
+RF.max_samples_cap_rows,600000
+RF.n_jobs,2
+RF.class_weight,balanced only in class_weight condition
+XGB.n_estimators,200
+XGB.max_depth,6
+XGB.learning_rate,0.1
+XGB.subsample,0.8
+XGB.colsample_bytree,0.8
+XGB.tree_method,hist
+XGB.n_jobs,2
+XGB.scale_pos_weight,neg/pos from training partition only in class_weight condition
+resampling.undersample,RandomUnderSampler fraud:legit 1:1
+resampling.smote,"SMOTE sampling_strategy=0.1,k_neighbors=5, applied to encoded features, training only"
+threshold_rule,"validation maximum F1, applied once to test"
+bootstrap_resamples.chronological_test,1000
+bootstrap_resamples.random_test,200
+bootstrap,class-conditional multinomial weights
+chronological_split.train,steps 1-502
+chronological_split.validation,steps 503-610
+chronological_split.test,steps 611-718
+random_split,"stratified 70/15/15 on steps 1-718, seed 42"
+software.python,3.13.16
+software.scikit_learn,1.9.1
+software.xgboost,3.4.1
+software.imbalanced_learn,0.14.2
+software.shap,0.52.0
+software.numpy,2.5.3
+software.pandas,3.0.5
+software.scipy,1.18.1
+hardware.cpu_threads_used,2
+hardware.cpu_count,2
+hardware.platform,Linux-6.18.44-fc-v77-x86_64-with-glibc2.39

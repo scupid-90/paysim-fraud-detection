@@ -1,0 +1,7 @@
+group,threshold_rule,threshold,TP,FP,TN,FN,alerts
+chronological_model_on_chronological_test,val_f1_thr,0.9940976789611591,661,98,98767,531,759
+chronological_model_on_chronological_test,fixed_0.5,0.5,1125,6285,92580,67,7410
+random_model_on_random_test,val_f1_thr,0.9999129566962478,531,137,953025,656,668
+random_model_on_random_test,fixed_0.5,0.5,1115,51296,901866,72,52411
+random_model_on_chronological_test,val_f1_thr,0.9999129566962478,540,4,98861,652,544
+random_model_on_chronological_test,fixed_0.5,0.5,1128,5589,93276,64,6717
